@@ -4,10 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from '../src/routes/root';
 import ItemRoot from '../src/routes/item';
 import Layout from './components/Layout';
+import ErrorElement from './components/ErrorElement';
 import './index.css';
 
 const router = createBrowserRouter([
 	{
+		path: '/',
+		errorElement: <ErrorElement />,
 		element: <Layout />,
 		children: [
 			{

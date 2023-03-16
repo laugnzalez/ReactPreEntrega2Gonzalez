@@ -6,8 +6,6 @@ import ItemList from '../ItemList';
 function ItemListContainer({ greeting, categoryId, boolParameters }) {
 	const [products, setProducts] = useState([]);
 	const [category, setCategory] = useState([]);
-	console.log(categoryId);
-	console.log(boolParameters);
 
 	useEffect(() => {
 		const ProductsP = new Promise((resolve, reject) =>
