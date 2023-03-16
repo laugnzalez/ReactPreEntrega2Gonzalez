@@ -8,10 +8,19 @@ import CartWidget from '../CartWidget';
 
 function NavBar() {
 	return (
-		<Navbar bg="secondary" variant="dark" expand="lg">
+		<Navbar bg="secondary" expand="lg">
 			<Container>
 				<Navbar.Brand>
-					<NavLink to="/">
+					<NavLink
+						to="/"
+						style={({ isActive }) => {
+							return {
+								fontWeight: isActive ? 'bold' : '',
+								color: 'white',
+								textDecoration: 'none',
+							};
+						}}
+					>
 						<i className="bi bi-rainbow"></i> Blár Decó
 					</NavLink>
 				</Navbar.Brand>
@@ -19,14 +28,46 @@ function NavBar() {
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
 						<Nav.Item>
-							<NavLink to="/category/hogar">Hogar</NavLink>
+							<NavLink
+								to="/category/hogar"
+								style={({ isActive }) => {
+									return {
+										fontWeight: isActive ? 'bold' : '',
+										color: 'white',
+										textDecoration: 'none',
+									};
+								}}
+							>
+								Hogar
+							</NavLink>
 						</Nav.Item>
 
 						<Nav.Item>
-							<NavLink to="category/decoracion">Decoración</NavLink>
+							<NavLink
+								to="category/decoracion"
+								style={({ isActive }) => {
+									return {
+										fontWeight: isActive ? 'bold' : '',
+										color: 'white',
+										textDecoration: 'none',
+										paddingLeft: '20px',
+									};
+								}}
+							>
+								Decoración
+							</NavLink>
 						</Nav.Item>
 					</Nav>
-					<NavLink to="/cart">
+					<NavLink
+						to="/cart"
+						style={({ isActive }) => {
+							return {
+								fontWeight: isActive ? 'bold' : '',
+								color: 'white',
+								textDecoration: 'none',
+							};
+						}}
+					>
 						<CartWidget />
 					</NavLink>
 				</Navbar.Collapse>

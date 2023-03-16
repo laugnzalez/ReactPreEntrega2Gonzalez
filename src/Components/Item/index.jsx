@@ -1,4 +1,4 @@
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Item({ item }) {
@@ -8,6 +8,14 @@ function Item({ item }) {
 				<Card.Img src={item.image} />
 				<Card.Body>
 					<Card.Title>{item.name}</Card.Title>
+					<Button>
+						<Link
+							to={`/item/${item.id}`}
+							style={{ textDecoration: 'none', color: 'white' }}
+						>
+							Ver detalle
+						</Link>
+					</Button>
 				</Card.Body>
 			</Card>
 		</Col>
