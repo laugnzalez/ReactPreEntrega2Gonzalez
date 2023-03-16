@@ -22,7 +22,7 @@ function ItemCount({ stock, initial, onAdd }) {
 		<div className="">
 			<Stack direction="horizontal" gap="3">
 				<Button onClick={substractQuantity}>-</Button>
-				<span>{quantity}</span>
+				<span>{quantity} </span>
 				<Button onClick={sumQuantity}>+</Button>
 			</Stack>
 

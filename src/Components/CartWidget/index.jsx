@@ -3,10 +3,10 @@ import { Badge } from 'react-bootstrap';
 
 function CartWidget() {
 	return (
-		<Nav.Link href="#cart">
+		<Nav.Item href="#cart">
 			<i className="bi bi-cart-fill"></i>
 			<Badge bg="black">1</Badge>
-		</Nav.Link>
+		</Nav.Item>
 	);
 }
 
